@@ -1,7 +1,7 @@
-var editor = (callback) =>{
+var editor = (data,callback) =>{
    var element = html(`
    <section class="document-editor">
-   <h3 contentEditable='true'>//title//</h3>
+   <h3 contentEditable='true'>${data.title}</h3>
    <div></div>
    <button>submit</button>
    </section>
@@ -10,6 +10,7 @@ var editor = (callback) =>{
    var content = element.querySelector('div')
    var button = element.querySelector('button')
    var tinyMDE = new TinyMDE.Editor({element: content});
+   tinyMDE.e.innerText=data.content
    button.addEventListener('click',()=>{
       callback(JSON.stringify({
          title:title.innerText,
