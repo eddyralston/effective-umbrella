@@ -1,0 +1,8 @@
+.document-editor h3{
+   padding:2px;
+}
+.document-editor{background-color: rgb(189, 189, 189);padding:5px;}
+.document-editor h3,.document-editor div{
+   margin:2px;
+   background-color: rgb(255, 255, 255);
+}
