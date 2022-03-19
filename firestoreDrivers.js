@@ -3,7 +3,7 @@ var fs = {}
 fs.coll=function(collName){
    return {
       add(data,callback){
-         fetch(url+'/api/'+collName,{method: 'POST',headers: {  'Accept': 'application/json',  'Content-Type': 'application/json'},body: JSON.stringify(data)}).then(res=>res.json()).then(callback)
+         fetch(url+'/api/'+collName,{method: 'POST',headers: {  'Accept': 'application/json',  'Content-Type': 'application/json'},body: data}).then(res=>res.json()).then(callback)
       },
       get(callback){
          fetch(url+'/api/'+collName).then(res=>res.json()).then(callback)
